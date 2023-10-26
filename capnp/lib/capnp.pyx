@@ -13,7 +13,7 @@ from capnp.helpers.helpers cimport init_capnp_api
 from capnp.includes.capnp_cpp cimport AsyncIoStream, WaitScope, PyPromise, VoidPromise, EventPort, EventLoop, PyAsyncIoStream, PromiseFulfiller, VoidPromiseFulfiller, tryReadMessage, writeMessage, makeException, PythonInterfaceDynamicImpl
 from capnp.includes.schema_cpp cimport (MessageReader,)
 
-from cpython cimport array, Py_buffer, PyObject_CheckBuffer
+from cpython cimport Py_buffer, PyObject_CheckBuffer
 from cpython.buffer cimport PyBUF_SIMPLE, PyBUF_WRITABLE, PyBUF_WRITE, PyBUF_READ
 from cpython.memoryview cimport PyMemoryView_FromMemory
 from cpython.exc cimport PyErr_Clear
@@ -23,7 +23,6 @@ from libc.string cimport memcpy
 from libcpp.utility cimport move
 
 
-import array
 import asyncio
 import collections as _collections
 import contextlib
