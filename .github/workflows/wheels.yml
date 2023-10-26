@@ -33,7 +33,7 @@ jobs:
         run: python -m cibuildwheel --output-dir wheelhouse
         env:
           CIBW_ARCHS: ${{ matrix.arch }}
-          CIBW_SKIP: cp*
+          CIBW_BUILD: pp310*
           CIBW_TEST_REQUIRES: pytest pytest-asyncio
           CIBW_TEST_COMMAND: pytest {project}
           # Only needed to make the macosx arm64 build work
