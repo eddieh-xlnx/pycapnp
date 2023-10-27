@@ -232,7 +232,7 @@ setup(
     },
     ext_modules=Cython.Build.cythonize(extensions),
     cmdclass={"clean": clean, "build_ext": build_libcapnp_ext},
-    install_requires=[],
+    install_requires=["cython<3"],
     entry_points={"console_scripts": ["capnpc-cython = capnp._gen:main"]},
     # PyPi info
     description="A cython wrapping of the C++ Cap'n Proto library",
