@@ -4159,7 +4159,7 @@ cdef class _FlatArrayMessageReader(_MessageReader):
             schema_cpp.WordArrayPtr(<schema_cpp.word*>ptr, sz//8),
             opts)
 
-    def close(self):
+    cpdef close(self):
         if self._buffer_view:
             self._buffer_view.close()
 
